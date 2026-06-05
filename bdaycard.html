@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/bdaycard.css">
+    <title>bday present</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text1">ur present is me!</div>
+        <img class="image" src="./images/ren4.gif" alt = "cute and sleepy ren">
+        <div class="text2">RENIFER!</div>
+    </div>
+
+    <div class="container2">
+        <div class="text3">jk...here ya go beatch</div>
+        <img class="image2" src="./images/gift.png" onclick="openModal()" style="cursor: pointer;" />
+    </div>
+
+    <div id="modal" style="display:none;">
+        <div id="overlay" onclick="closeModal()"></div>
+        <div id="popup">
+            <button onclick="closeModal()">✕</button>
+            <div class="popup_title">Dear Graceland,</div>
+            <div class="popup_text">
+                <p>Happy Birthday!</p>
+                <p>Firstly...wow, what a blessing to be friends with me...like who else will stay up late and build you a website? *cough cough* never a man... *cough cough*</p>
+                <p>Secondly, CONGRATS for living this long! You look so good that I be forgetting how old you are...I'm kidding I totally remember... </p>
+                <p>Thirdly, I'm thankful you're still alive and that I was lucky enough to cross path with your caring, annoyingly nonchalant, bad bitch, big dog energy ass. </p>
+                <p>Without you, this place wouldn't have been as fun...nor be standing. Like who else could have been my free therapist while washing the dishes?</p>
+                <p>Thank you for your service, being the shrek to my donkey. Hope to annoy you more in the future before you decide to break my heart...</p>
+                <p>Have an AMAZING BIRTHDAY!</p>
+
+                <p>With love and possessiveness,</p>
+                <p>Your wonderful, amazing, smart, jealous, obsessive, cutie patootie, actually really socially akward son,</p>
+                <p>Anneliesse Renifer Jr. Alcalde</p>
+            </div>
+
+            <div class="channel">
+                <p>here's ur Channel bag btw</p>
+                <img class="image" src="./images/channel.gif" alt = "im fucking cute and sleepy">
+                <p>this was expensive asf</p>
+            </div>
+
+            <div class="PS">
+                <p>PS I'M NEVER DOING THIS SHIT AGAIN...you're lucky I like you...</p>
+                <p>Love you 🫶</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // modal function 
+        function openModal() {
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+     <script>
+        // confetti + audio 
+        const entranceSound = new Audio('./audio/yay.mp3');
+        entranceSound.preload = 'auto';
+
+        window.addEventListener('load', () => {
+            entranceSound.play().catch(() => {});
+
+            confetti({
+                particleCount: 100,
+                angle: 60,
+                spread: 70,
+                origin: { x: 0, y: 0.8 },
+                gravity: 1.2,
+                ticks: 150,
+            });
+
+            confetti({
+                particleCount: 100,
+                angle: 120,
+                spread: 70,
+                origin: { x: 1, y: 0.8 },
+                gravity: 1.2,
+                ticks: 150,
+            });
+        });
+    </script>
+</body>
+</html>

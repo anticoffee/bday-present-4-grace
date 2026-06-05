@@ -1,0 +1,133 @@
+body{
+    display: flex;
+    background-color: #eee5da;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text1{
+    font-size: 35px;
+    font-family: monospace;
+    color: #262424;
+    text-align: center;
+
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing1 1.11s steps(15,end) 1s forwards;
+}
+
+.text2{
+    font-size: 30px;
+    font-family: monospace;
+    color: #262424;
+    text-align: center;
+    margin-bottom: 20px;
+
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    animation: 
+        show 0s 4s forwards,
+        typing2 2s steps(27,end) 4s forwards;
+}
+
+.text3{
+    font-size: 30px;
+    font-family: monospace;
+    color: #262424;
+    text-align: center;
+    margin-bottom: 40px;
+
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    animation: 
+        show 0s 8.3s forwards,
+        typing3 0.6s steps(7,end) 8.3s forwards;
+}
+
+@keyframes typing1 {
+    from {width: 0;}
+    to {width: 15ch;}
+}
+
+@keyframes typing2 {
+    from {width: 0;}
+    to {width: 27ch;}
+}
+
+@keyframes typing3 {
+    from {width: 0;}
+    to {width: 8ch;}
+}
+
+@keyframes show {
+    to {opacity: 1;}
+}
+
+.btn_parent_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 9.7s;
+}
+
+@keyframes fadeUp {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.buttons{
+    font-family: monospace;
+    background-color: #eee5da;
+    color: #262424;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px 30px;
+    display: inline-flex;
+    cursor: pointer;
+    border: 1.5px solid;
+    border-radius: 4px;
+}
+
+.buttons:hover{
+    background-color: #262424;
+    color: #eee5da;
+}
+
+.image{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 7.2s;
+}
